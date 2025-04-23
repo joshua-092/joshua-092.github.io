@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>邱奕翔｜個人履歷網站</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    html {
+      scroll-padding-top: 100px;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+    h1, h2 {
+      color: #0d6efd;
+    }
+    .section {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .navbar-nav .nav-link {
+      color: #0d6efd;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(13, 110, 253, 0.1);
+      border-radius: 0.375rem;
+      text-decoration: none;
+      color: #0a58ca;
+    }
+    footer {
+      color: #6c757d;
+    }
+    .btn-outline-secondary {
+      margin-top: 1rem;
+    }
+    header img.profile-pic {
+      max-width: 240px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="container py-4">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm mb-5 py-3 border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-primary" href="#" data-zh="邱奕翔 ｜ 產品 / 專案管理" data-en="Yi-Siang Chiu ｜ Product / Project Management">邱奕翔 ｜ 產品 / 專案管理</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#top" data-zh="首頁" data-en="Home">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" data-zh="關於我" data-en="About">關於我</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education" data-zh="學歷" data-en="Education">學歷</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience" data-zh="經歷" data-en="Experience">經歷</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills" data-zh="技能" data-en="Skills">技能</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#certificates" data-zh="證照" data-en="Certificates">證照</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-section" data-zh="聯繫我" data-en="Contact Me">聯繫我</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-primary btn-sm ms-2 align-self-center mt-1" onclick="toggleLanguage()" data-zh="中 / EN" data-en="EN / 中">中 / EN</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div style="height: 72px;"></div>
+  <header class="mb-5">
+  <div class="row align-items-center">
+    <div class="col-md-8 text-start">
+      <h1 class="display-4 fw-bold" data-zh="您好，我是" data-en="Hello, I am">您好，我是</h1>
+      <h2 class="display-5 fw-bold text-dark" data-zh="邱奕翔 Yi-Siang Chiu" data-en="Yi-Siang Chiu">邱奕翔 Yi-Siang Chiu</h2>
+      <p class="lead mt-3" data-zh="以商業思維為核心，融合管理知識與產品策略，致力於推動科技產業的創新實踐。" data-en="Centered on business thinking, integrating management knowledge and product strategy to drive innovation in the tech industry.">
+        以商業思維為核心，融合管理知識與產品策略，致力於推動科技產業的創新實踐。
+      </p>
+      <div class="mt-4">
+  <div class="d-flex flex-column flex-md-row align-items-start justify-content-start gap-4">
+    <div class="d-flex flex-column align-items-start gap-3">
+      <div class="d-flex gap-3">
+        <a href="#about" class="btn btn-primary px-4 py-2 fw-semibold rounded-3" style="width: 200px; height: 52px; line-height: 38px;" data-zh="關於我" data-en="About Me">關於我</a>
+        <a href="#contact-section" class="btn btn-outline-secondary px-4 py-2 fw-semibold rounded-3 align-self-start mt-md-0 mt-2" style="width: 200px; height: 52px; line-height: 38px;" data-zh="聯繫我" data-en="Contact Me">聯繫我</a>
+      </div>
+      <div class="d-flex gap-3">
+        <a href="#contact-section" aria-label="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
+        </a>
+        <a href="mailto:joshuachiu09@gmail.com" aria-label="Email">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" width="24" height="24">
+        </a>
+        <a href="#contact-section" aria-label="Phone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" class="bi bi-telephone" viewBox="0 0 16 16">
+            <path d="M3.654 1.328a.678.678 0 0 1 1.018-.063L6.29 2.855c.329.329.445.81.302 1.237l-.547 1.638a.678.678 0 0 0 .17.684l2.457 2.457a.678.678 0 0 0 .684.17l1.638-.547a1.007 1.007 0 0 1 1.237.302l1.59 1.59c.27.27.282.705.063 1.018-.494.74-1.284 1.497-2.073 2.002-.615.392-1.444.536-2.343.134C6.603 13.874 2.127 9.397 1.031 5.478c-.402-.9-.258-1.728.134-2.343.505-.79 1.262-1.58 2.002-2.073z"/>
+          </svg>
+        </a>
+       </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 text-center mt-4 mt-md-0">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQEt8iLPTarsvQ/profile-displayphoto-shrink_800_800/B56ZXbpRz1GQAg-/0/1743146786432?e=1750291200&v=beta&t=f6R8z1YAqpte0BxbCSGklCbAK6Bk6WWHMO19yxIwOSc" alt="Profile Picture" class="profile-pic">
+      </div>
+    </div>
+  </header>
+
+
+
+
+ <section id="about" class="section">
+  <h2 data-zh="關於我" data-en="About Me">關於我</h2>
+  <p data-zh="我目前就讀於國立臺灣科技大學企業管理系，預計於 2026 年畢業。具備邏輯思考、獨立判斷與跨部門溝通能力，曾擔任多項校內團隊報告領導人，培養出時間管理、扛壓能力與團隊協作的綜合能力。亦具備兼職工作經驗，顧客溝通與團隊協作，並在工作中展現強烈的責任感與問題解決能力。目前正在尋找科技產業產品專案管理實習與正職工作經驗，將商業思維與科技產業結合，推動具影響力的產品與為公司創造價值。"
+     data-en="I am currently studying Business Administration at National Taiwan University of Science and Technology and expect to graduate in 2026. I possess strong logical thinking, independent judgment, and cross-functional communication skills. As a leader in multiple university team projects, I have developed time management, stress resilience, and collaboration abilities. My part-time work experience has enhanced my customer communication and teamwork skills, while demonstrating strong responsibility and problem-solving in the workplace. I am currently seeking internship and full-time opportunities in product and project management within the tech industry, aiming to combine business thinking with technology to drive impactful product outcomes and create value for companies.">
+    我目前就讀於國立臺灣科技大學企業管理系，預計於 2026 年畢業。具備邏輯思考、獨立判斷與跨部門溝通能力，曾擔任多項校內團隊報告領導人，培養出時間管理、扛壓能力與團隊協作的綜合能力。亦具備兼職工作經驗，顧客溝通與團隊協作，並在工作中展現強烈的責任感與問題解決能力。目前正在尋找科技產業產品專案管理實習與正職工作經驗，將商業思維與科技產業結合，推動具影響力的產品與為公司創造價值。
+  </p>
+</section>
+
+   <section id="education" class="section">
+    <h2 data-zh="學歷" data-en="Education">學歷</h2>
+    <div class="card shadow-sm mb-4">
+      <div class="card-body d-flex align-items-start">
+        <img src="https://www.ntust.edu.tw/var/file/0/1000/msys_1000_92476_24746.png" alt="NTUST Logo" width="50" height="50" class="me-3">
+        <div>
+          <h5 class="card-title mb-2" data-zh="國立臺灣科技大學｜企業管理學士 (2021-2026)" data-en="National Taiwan University of Science and Technology, Bachelor of Business Administration (2021-2026)">
+            國立臺灣科技大學｜企業管理學士 (2021-2026)
+          </h5>
+          <p class="mb-1" data-zh="GPA：3.5 / 4.3" data-en="GPA: 3.5 / 4.3">GPA：3.5 / 4.3</p>
+          <p class="mb-1" data-zh="主修課程：經濟學、財務管理、行銷管理、策略管理。" data-en="Relevant coursework: Economics, Financial Management, Marketing Management, Strategic Management.">
+            主修課程：經濟學、財務管理、行銷管理、策略管理。
+          </p>
+          <p class="mb-0" data-zh="自學：專案管理與邏輯思維。" data-en="Self-learning: Project Management and Logical Thinking.">
+            自學：專案管理與邏輯思維。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section id="experience" class="section">
+  <h2 data-zh="經歷" data-en="Experience">經歷</h2>
+  <div class="mb-4 d-flex gap-2 flex-wrap">
+    <button class="btn btn-dark btn-sm" onclick="filterCards('all')" data-zh="所有經歷" data-en="All Experience">所有經歷</button>
+    <button class="btn btn-outline-dark btn-sm" onclick="filterCards('work')" data-zh="工作經驗" data-en="Work Experience">工作經驗</button>
+    <button class="btn btn-outline-dark btn-sm" onclick="filterCards('school')" data-zh="學校經驗" data-en="School Experience">學校經驗</button>
+  </div>
+  <div class="row" id="experience-cards">
+    <div class="col-md-6 mb-4 experience-card" data-type="work">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title" data-zh="星巴克｜門市兼職夥伴 (2022/08 - 2024/11)" data-en="Starbucks｜Part-time Store Partner (2022/08 - 2024/11)">星巴克｜門市兼職夥伴 (2022/08 - 2024/11)</h5>
+          <ul class="card-text ps-3" style="list-style-type: disc;">
+            <li data-zh="與團隊合作緊密，協同完成每日營運並確保服務一致性。" data-en="Collaborated closely with team members to ensure smooth daily operations and consistent service delivery.">與團隊合作緊密，協同完成每日營運並確保服務一致性。</li>
+            <li data-zh="提供卓越顧客服務，根據內部回饋，顧客滿意度平均超過 90%。" data-en="Provide excellent customer service, with an average customer satisfaction rate of over 90% based on internal feedback.">提供卓越顧客服務，根據內部回饋，顧客滿意度平均超過 90%。</li>
+            <li data-zh="培養銷售技巧，平均每日營收提升 10%。" data-en="Developed strong sales skills, driving an average 10% daily sales increase.">培養銷售技巧，平均每日營收提升 10%。</li>
+            <li data-zh="妥善處理顧客衝突，使正面評價提升 20%。" data-en="Professionally resolved customer conflicts, resulting in a 20% increase in favorable customer reviews.">妥善處理顧客衝突，使正面評價提升 20%。</li>
+            <li data-zh="適應快節奏工作環境，每日處理超過 100 筆交易並維持準確性與效率。" data-en="Adapt to a fast-paced work environment and process 100+ transactions per day while maintaining accuracy and efficiency.">適應快節奏工作環境，每日處理超過 100 筆交易並維持準確性與效率。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4 experience-card" data-type="school">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title" data-zh="校內團隊報告 (大學在學期間)" data-en="University Team Project Leader (During University Studies)">校內團隊報告 (大學在學期間)</h5>
+          <ul class="card-text ps-3" style="list-style-type: disc;">
+            <li data-zh="帶領 5 人以上團隊，高品質準時完成 100% 專案。" data-en="Led a 5+ member team, ensuring 100% on-time project completion with high quality.">帶領 5 人以上團隊，高品質準時完成 100% 專案。</li>
+            <li data-zh="透過有效溝通與協調，有效化解團隊內部衝突。" data-en="Resolved team conflicts through effective communication and coordination.">透過有效溝通與協調，有效化解團隊內部衝突。</li>
+            <li data-zh="具備跨領域團隊合作與溝通協調能力，能整合不同背景成員的觀點與專業。" data-en="Demonstrated cross-disciplinary communication and collaboration skills, integrating perspectives from diverse team members.">具備跨領域團隊合作與溝通協調能力，能整合不同背景成員的觀點與專業。</li>
+            <li data-zh="策略性分配任務，使團隊效率提升 30%，專案平均成績達 85%。" data-en="Assigned tasks strategically, improving team efficiency by 30% and achieving an 85%+ average project score.">策略性分配任務，使團隊效率提升 30%，專案平均成績達 85%。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4 experience-card" data-type="school">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title" data-zh="全國技藝競賽｜商業簡報 (2020)" data-en="National Skills Competition｜Business Presentation (2020)">全國技藝競賽｜商業簡報 (2020)</h5>
+          <p class="card-text mb-1" data-zh="教育部主辦" data-en="Organized by Ministry of Education">教育部主辦</p>
+          <p class="card-text" data-zh="技能：商業簡報製作能力及快速掌握重點資訊的能力" data-en="Skills: Business presentation design skills and the ability to quickly identify key insights.">技能：商業簡報製作能力及快速掌握重點資訊的能力</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <script>
+    function filterCards(type) {
+      const cards = document.querySelectorAll('.experience-card');
+      cards.forEach(card => {
+        if (type === 'all' || card.getAttribute('data-type') === type) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+
+  <section id="skills" class="section">
+    <h2 data-zh="技能" data-en="Skills">技能</h2>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text mb-0" data-zh="邏輯思考與獨立判斷｜具備理性分析能力，能在做出合理決策" data-en="Logical Thinking & Independent Judgment｜Capable of rational analysis and sound decision-making">邏輯思考與獨立判斷｜具備理性分析能力，能在做出合理決策</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text mb-0" data-zh="團隊合作與溝通協調｜跨部門協作經驗豐富，善於整合不同觀點與資源" data-en="Teamwork & Communication｜Experienced in cross-functional collaboration and aligning diverse perspectives">團隊合作與溝通協調｜跨部門協作經驗豐富，善於整合不同觀點與資源</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text mb-0" data-zh="時間管理與扛壓能力｜能在高壓情境中維持效率，妥善安排多項任務" data-en="Time Management & Stress Resilience｜Efficient under pressure with excellent task prioritization">時間管理與扛壓能力｜能在高壓情境中維持效率，妥善安排多項任務</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text mb-0" data-zh="問題解決｜具備拆解問題、提出創新方案與持續優化流程的能力" data-en="Problem Solving｜Skilled in issue breakdown, innovation, and process optimization">問題解決｜具備拆解問題、提出創新方案與持續優化流程的能力</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text mb-0" data-zh="商業思維與產品敏銳度｜理解用戶需求與市場動態，能轉化為可執行策略" data-en="Business Thinking & Product Sense｜Able to translate user needs and market trends into executable strategies">商業思維與產品敏銳度｜理解用戶需求與市場動態，能轉化為可執行策略</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text mb-0" data-zh="熟悉 Microsoft Office 工具｜Word、Excel、PowerPoint 皆具備實務操作經驗" data-en="Proficient in Microsoft Office｜Hands-on experience with Word, Excel, and PowerPoint">熟悉 Microsoft Office 工具｜Word、Excel、PowerPoint 皆具備實務操作經驗</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="certificates" class="section">
+  <h2 data-zh="證照" data-en="Certificates">證照</h2>
+  <div class="row" id="certificate-cards">
+    <div class="col-md-6 mb-4 certificate-card">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title" data-zh="乙級電腦軟體應用技術士 (2020)" data-en="Level B technician for computer software application (2020)">乙級電腦軟體應用技術士 (2020)</h5>
+          <p class="card-text" data-zh="勞動部勞動力發展署技能檢定中心<br>證照編號 118-166157<br>技能：Microsoft Office、Microsoft Access、Microsoft Excel、Microsoft Word" data-en="Workforce Development Agency, Ministry of Labor<br>ID: 118-166157<br>Skills: Microsoft Office, Microsoft Access, Microsoft Excel, Microsoft Word">
+            勞動部勞動力發展署技能檢定中心<br>證照編號 118-166157<br>技能：Microsoft Office、Microsoft Access、Microsoft Excel、Microsoft Word
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4 certificate-card">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title" data-zh="TQC-OA - Excel 高級 (2019)" data-en="TQC-OA - Excel Advanced (2019)">TQC-OA - Excel 高級 (2019)</h5>
+          <p class="card-text" data-zh="財團法人電腦技能基金會<br>技能：Microsoft Excel" data-en="COMPUTER SKILLS FOUNDATION<br>Skills: Microsoft Excel">
+            財團法人電腦技能基金會<br>技能：Microsoft Excel
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4 certificate-card">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title" data-zh="TQC-OA - PowerPoint 2016 專業級 (2019)" data-en="TQC-OA - PowerPoint 2016 Professional (2019)">TQC-OA - PowerPoint 2016 專業級 (2019)</h5>
+          <p class="card-text" data-zh="財團法人電腦技能基金會<br>技能：Microsoft PowerPoint" data-en="COMPUTER SKILLS FOUNDATION<br>Skills: Microsoft PowerPoint">
+            財團法人電腦技能基金會<br>技能：Microsoft PowerPoint
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4 certificate-card">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title" data-zh="TQC-OA - Word 專業級 (2018)" data-en="TQC-OA - Word Professional (2018)">TQC-OA - Word 專業級 (2018)</h5>
+          <p class="card-text" data-zh="財團法人電腦技能基金會<br>技能：Microsoft Office、Microsoft Word" data-en="COMPUTER SKILLS FOUNDATION<br>Skills: Microsoft Office, Microsoft Word">
+            財團法人電腦技能基金會<br>技能：Microsoft Office、Microsoft Word
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="contact-section" class="section">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 data-zh="聯繫我" data-en="Contact Me">聯繫我</h2>
+      <p class="d-flex align-items-center mb-2">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" width="24" height="24" class="me-2">
+  <span data-zh="電子郵件" data-en="Email">電子郵件</span>
+  <a href="mailto:joshuachiu09@gmail.com" class="ms-2">joshuachiu09@gmail.com</a>
+</p>
+      <p class="d-flex align-items-center mb-2">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="24" height="24" class="me-2">
+  <span data-zh="LinkedIn" data-en="LinkedIn">LinkedIn</span>
+  <a href="https://www.linkedin.com/in/yi-siang-chiu-017b94358/" target="_blank" class="ms-2">linkedin.com/in/yi-siang-chiu-017b94358/</a>
+</p>
+      <p class="d-flex align-items-center mb-2">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone me-2" viewBox="0 0 16 16">
+    <path d="M3.654 1.328a.678.678 0 0 1 1.018-.063L6.29 2.855c.329.329.445.81.302 1.237l-.547 1.638a.678.678 0 0 0 .17.684l2.457 2.457a.678.678 0 0 0 .684.17l1.638-.547a1.007 1.007 0 0 1 1.237.302l1.59 1.59c.27.27.282.705.063 1.018-.494.74-1.284 1.497-2.073 2.002-.615.392-1.444.536-2.343.134C6.603 13.874 2.127 9.397 1.031 5.478c-.402-.9-.258-1.728.134-2.343.505-.79 1.262-1.58 2.002-2.073z"/>
+  </svg>
+  <span data-zh="電話號碼" data-en="Phone Number">電話號碼</span>
+  <a href="tel:0960013811" class="ms-2">0960-013-811</a>
+</p>
+    </div>
+    <div class="col-md-6">
+      <form action="mailto:joshuachiu09@gmail.com" method="POST" enctype="text/plain">
+        <div class="mb-3">
+          <label for="name" class="form-label" data-zh="您的姓名" data-en="Your Name">您的姓名</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label" data-zh="電子郵件地址" data-en="Email Address">電子郵件地址</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label" data-zh="主題" data-en="Subject">主題</label>
+          <input type="text" class="form-control" id="subject" name="subject">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label" data-zh="訊息內容" data-en="Message">訊息內容</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" data-zh="發送訊息" data-en="Send Message">發送訊息</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center mt-5">
+    <p data-zh="&copy; 2025 邱奕翔 Yi-Siang Chiu" data-en="&copy; 2025 Yi-Siang Chiu">&copy; 2025 邱奕翔 Yi-Siang Chiu</p>
+  </footer>
+
+  <script>
+    function toggleLanguage() {
+      const elements = document.querySelectorAll('[data-zh]');
+      const isChinese = document.documentElement.lang === 'zh-Hant';
+      elements.forEach(el => {
+        const zh = el.getAttribute('data-zh');
+        const en = el.getAttribute('data-en');
+        if (zh && en) {
+          el.innerHTML = isChinese ? en : zh;
+        }
+      });
+      document.documentElement.lang = isChinese ? 'en' : 'zh-Hant';
+    }
+  </script>
+</body>
+</html>
