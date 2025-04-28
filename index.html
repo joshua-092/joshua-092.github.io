@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yi-Siang Chiu | Personal Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&family=Pacifico&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Roboto', sans-serif; background: #f8f4f1; color: #4C3A32; line-height: 1.6; }
+  nav {
+    background: #f8f4f1;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .logo { font-family: 'Pacifico', cursive; font-size: 24px; color: #4C3A32; text-decoration: none; }
+  .nav-links { display: flex; align-items: center; gap: 20px; }
+  .nav-links a, .language-switcher { text-decoration: none; color: #4C3A32; font-size: 16px; font-weight: 500; font-family: 'Playfair Display', serif; }
+  .nav-links a:hover { text-decoration: underline; }
+  .language-switcher { border: 1px solid #4C3A32; padding: 5px 10px; border-radius: 5px; background: transparent; cursor: pointer; }
+
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f4f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-text { flex: 1; }
+  .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 4rem; letter-spacing: 3px; }
+  .hero-text p { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 10px 0; }
+  .button-group { margin-top: 20px; display: flex; gap: 20px; }
+  .btn-primary, .btn-secondary {
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid #4C3A32;
+    transition: 0.3s;
+  }
+  .btn-primary { background: #4C3A32; color: white; }
+  .btn-primary:hover { background: #6b5347; }
+  .btn-secondary { background: transparent; color: #4C3A32; }
+  .btn-secondary:hover { background: #4C3A32; color: white; }
+  .hero-image { flex: 1; }
+  .hero-image img { width: 100%; height: auto; border-radius: 10px; object-fit: cover; }
+
+  section { padding: 100px 10%; }
+  .section-container { max-width: 1200px; margin: auto; }
+
+  h2 { font-family: 'Playfair Display', serif; text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #4C3A32; }
+
+  footer { background: #4C3A32; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+
+  @media (max-width: 768px) {
+    .hero-content { flex-direction: column; text-align: center; }
+    .hero-text h1 { font-size: 2.5rem; }
+    .hero-text p { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="#home" class="logo">Yi-Siang Chiu</a>
+  <div class="nav-links">
+    <a href="#home" data-en="Home" data-zh="首頁">Home</a>
+    <a href="#about" data-en="About" data-zh="關於我">About</a>
+    <a href="#education" data-en="Education" data-zh="學歷">Education</a>
+    <a href="#experience" data-en="Experience" data-zh="經驗">Experience</a>
+    <a href="#skills" data-en="Skills" data-zh="技能">Skills</a>
+    <a href="#certificates" data-en="Certificates" data-zh="證書">Certificates</a>
+    <a href="#contact" data-en="Contact Me" data-zh="聯絡我">Contact Me</a>
+    <button class="language-switcher" onclick="toggleLanguage()">EN / 中文</button>
+  </div>
+</nav>
+<section id="home" class="hero fade-section" style="background: url('https://cdn.pixabay.com/photo/2021/04/15/11/52/office-desk-6180921_1280.jpg') center/cover no-repeat; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 8%; color: #4C3A32;">
+  <div style="max-width: 600px;">
+    <p data-en="Hello, I am" data-zh="您好，我是" class="intro-text">Hello, I am</p>
+    <h1 data-en="YI SIANG CHIU" data-zh="邱奕翔 YI SIANG CHIU" class="name-title">YI SIANG CHIU</h1>
+    <p data-en="Are you looking for a product manager?" data-zh="您在尋找一個產品管理者嗎？" class="sub-title">Are you looking for a product manager?</p>
+
+    <div class="button-group">
+      <a href="#about" class="btn-primary" data-en="About Me" data-zh="關於我">About Me</a>
+      <a href="#contact" class="btn-secondary" data-en="Contact Me" data-zh="聯繫我">Contact Me</a>
+    </div>
+
+    <div class="icon-links">
+      <a href="https://linkedin.com/in/yi-siang-chiu-017b94358/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" alt="LinkedIn"></a>
+      <a href="mailto:joshuachiu09@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email"></a>
+      <a href="tel:+886960013811"><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone"></a>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleLanguage() {
+  const elements = document.querySelectorAll('[data-en], [data-zh]');
+  const button = document.querySelector('.language-switcher');
+  elements.forEach(el => {
+    if (el.innerText.trim() === el.getAttribute('data-zh')) {
+      el.innerText = el.getAttribute('data-en');
+      if (button) button.innerText = '中文 / EN';
+    } else {
+      el.innerText = el.getAttribute('data-zh');
+      if (button) button.innerText = 'EN / 中文';
+    }
+  });
+}
+
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+  document.querySelectorAll('.fade-section').forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= window.innerHeight * 0.85) {
+      section.classList.add('visible');
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.fade-section').forEach(section => {
+    section.classList.add('fade-section');
+  });
+});
+</script>
+
+<style>
+.intro-text {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+}
+
+.name-title {
+  font-size: 5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.sub-title {
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.icon-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-links img {
+  width: 30px;
+  height: 30px;
+  filter: invert(28%) sepia(9%) saturate(1153%) hue-rotate(343deg) brightness(92%) contrast(87%);
+}
+
+.btn-primary {
+  background-color: #4C3A32;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #4C3A32;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6b5347;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #4C3A32;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #4C3A32;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #4C3A32;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    align-items: center;
+    text-align: center;
+  }
+  .name-title {
+    font-size: 3rem;
+  }
+  .intro-text, .sub-title {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+
+
+
+<section id="about" class="about fade-section" style="background: #f8f4f1; max-width: 1200px; margin: auto; padding: 100px 20px;">
+  <div style="text-align: center; margin-bottom: 60px;">
+    <h2 data-en="About Me" data-zh="關於我" style="font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #4C3A32;">About Me</h2>
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 60px;">
+    <!-- 左側文字區 -->
+    <div style="flex: 1 1 500px; max-width: 600px; text-align: justify; color: #4C3A32;">
+      <p style="font-size: 1.2rem; line-height: 2; letter-spacing: 0.5px; margin-bottom: 30px;">
+        <span data-en="I am currently studying Business Administration at National Taiwan University of Science and Technology and expect to graduate in 2026. I possess strong logical thinking, independent judgment, and cross-functional communication skills. As a leader in multiple university team projects, I have developed time management, stress resilience, and collaboration abilities."
+          data-zh="我目前就讀於國立臺灣科技大學企業管理系，預計於2026年畢業。具備邏輯思考、獨立判斷與跨部門溝通能力。曾於多次校內團隊專案中擔任領導角色，培養了時間管理、抗壓性與團隊協作的能力。">
+          I am currently studying Business Administration at National Taiwan University of Science and Technology and expect to graduate in 2026. I possess strong logical thinking, independent judgment, and cross-functional communication skills. As a leader in multiple university team projects, I have developed time management, stress resilience, and collaboration abilities.
+        </span>
+      </p>
+      <p style="font-size: 1.2rem; line-height: 2; letter-spacing: 0.5px;">
+        <span data-en="My part-time work experience has enhanced my customer communication and teamwork skills, while demonstrating strong responsibility and problem-solving in the workplace. I am currently seeking internship and full-time opportunities in product and project management within the tech industry, aiming to combine business thinking with technology to drive impactful product outcomes and create value for companies."
+          data-zh="兼職工作經驗則進一步強化了顧客溝通與團隊合作技巧，並展現出高度責任感與問題解決能力。現正尋找科技產業中產品與專案管理領域的實習或正職機會，希望能結合商業思維與科技應用，推動具影響力的產品成果並為企業創造價值。">
+          My part-time work experience has enhanced my customer communication and teamwork skills, while demonstrating strong responsibility and problem-solving in the workplace. I am currently seeking internship and full-time opportunities in product and project management within the tech industry, aiming to combine business thinking with technology to drive impactful product outcomes and create value for companies.
+        </span>
+      </p>
+    </div>
+
+    <!-- 右側圖片區 -->
+    <div style="flex: 1 1 300px; max-width: 350px; display: flex; justify-content: center;">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQEt8iLPTarsvQ/profile-displayphoto-shrink_800_800/B56ZXbpRz1GQAg-/0/1743146786432?e=1750291200&v=beta&t=f6R8z1YAqpte0BxbCSGklCbAK6Bk6WWHMO19yxIwOSc" alt="Profile Photo" class="profile-photo" style="width: 100%; max-width: 300px; height: auto; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.4s ease;">
+    </div>
+  </div>
+</section>
+
+<style>
+  .profile-photo:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+
+
+
+
+
+<section id="education" class="about fade-section" style="padding: 100px 5%; background: #ffffff;">
+  <div style="text-align: center; margin-bottom: 60px;">
+    <h2 data-en="Education" data-zh="學歷" style="font-size: 2.8rem; font-family: 'Playfair Display', serif; color: #4C3A32;">
+      Education
+    </h2>
+  </div>
+
+  <div class="education-card" style="display: flex; align-items: center; gap: 30px; background: #ffffff; border-radius: 16px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); max-width: 900px; margin: auto; padding: 40px 30px; transition: all 0.4s ease;">
+    <div style="flex-shrink: 0;">
+      <img src="https://www.ntust.edu.tw/var/file/0/1000/msys_1000_92476_24746.png" alt="NTUST Logo" style="width: 80px; height: 80px; object-fit: contain; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background: #fff;">
+    </div>
+
+    <div style="flex: 1;">
+      <h3 data-en="National Taiwan University of Science and Technology, Bachelor of Business Administration (2021-2026)"
+          data-zh="國立臺灣科技大學｜企業管理學士（2021-2026）"
+          style="font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; font-family: 'Playfair Display', serif; color: #4C3A32;">
+        National Taiwan University of Science and Technology, Bachelor of Business Administration (2021-2026)
+      </h3>
+
+      <p style="margin: 6px 0; font-size: 1rem; color: #4C3A32; font-family: 'Roboto', sans-serif;">
+        <span data-en="GPA: 3.5 / 4.3" data-zh="GPA：3.5 / 4.3">GPA: 3.5 / 4.3</span>
+      </p>
+      <p style="margin: 6px 0; font-size: 1rem; color: #4C3A32; font-family: 'Roboto', sans-serif;">
+        <span data-en="Relevant coursework: Economics, Financial Management, Marketing Management, Strategic Management."
+              data-zh="主修課程：經濟學、財務管理、行銷管理、策略管理。">
+          Relevant coursework: Economics, Financial Management, Marketing Management, Strategic Management.
+        </span>
+      </p>
+      <p style="margin: 6px 0; font-size: 1rem; color: #4C3A32; font-family: 'Roboto', sans-serif;">
+        <span data-en="Self-learning: Project Management and Logical Thinking."
+              data-zh="自學：專案管理與邏輯思維。">
+          Self-learning: Project Management and Logical Thinking.
+        </span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 卡片 hover 特效 */
+.education-card {
+  transition: all 0.4s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+
+<style>
+/* 滑鼠滑過 Education 區塊小動畫 */
+#education .fade-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+
+
+  <section id="experience" class="experience" style="padding: 100px 5%; background: #f8f4f1;">
+  <div style="max-width: 1200px; margin: auto;">
+
+    <h2 data-en="Experience" data-zh="經驗" style="font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #4C3A32; text-align: center; margin-bottom: 40px;">Experience</h2>
+
+    <!-- 按鈕區 -->
+    <div style="text-align: center; margin-bottom: 50px;">
+      <button class="exp-filter active" data-en="All Experience" data-zh="所有經驗" onclick="filterExperience('all')">All Experience</button>
+      <button class="exp-filter" data-en="Work Experience" data-zh="工作經驗" onclick="filterExperience('work')">Work Experience</button>
+      <button class="exp-filter" data-en="School Experience" data-zh="學校經驗" onclick="filterExperience('school')">School Experience</button>
+    </div>
+
+    <!-- 卡片區 -->
+    <div id="experience-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 40px;">
+
+      <!-- 卡片 1：工作經驗 -->
+      <div class="exp-card" data-category="work">
+        <h3 data-en="Starbucks | Part-time Store Partner (2022/08 - 2024/11)" data-zh="星巴克 | 門市兼職夥伴 (2022/08 - 2024/11)">Starbucks | Part-time Store Partner (2022/08 - 2024/11)</h3>
+        <ul>
+          <li data-en="Collaborated closely with team members to ensure smooth daily operations and consistent service delivery." data-zh="與團隊合作緊密，協同完成每日營運並確保服務一致性。">Collaborated closely with team members to ensure smooth daily operations and consistent service delivery.</li>
+          <li data-en="Provided excellent customer service, with an average customer satisfaction rate of over 90% based on internal feedback." data-zh="提供卓越顧客服務，顧客滿意度平均超過90%。">Provided excellent customer service, with an average customer satisfaction rate of over 90% based on internal feedback.</li>
+          <li data-en="Developed strong sales skills, driving an average 10% daily sales increase." data-zh="培養銷售技巧，平均每日營收提升10%。">Developed strong sales skills, driving an average 10% daily sales increase.</li>
+          <li data-en="Professionally resolved customer conflicts, resulting in a 20% increase in favorable customer reviews." data-zh="妥善處理顧客衝突，讓正面評價提升20%。">Professionally resolved customer conflicts, resulting in a 20% increase in favorable customer reviews.</li>
+          <li data-en="Adapted to a fast-paced work environment and processed 100+ transactions per day while maintaining accuracy and efficiency." data-zh="適應快速工作環境，每日處理超過100筆交易並維持準確性與效率。">Adapted to a fast-paced work environment and processed 100+ transactions per day while maintaining accuracy and efficiency.</li>
+        </ul>
+      </div>
+
+      <!-- 卡片 2：學校經驗 -->
+      <div class="exp-card" data-category="school">
+        <h3 data-en="University Team Project Leader (During University Studies)" data-zh="校內團隊報告領導人 (大學在學期間)">University Team Project Leader (During University Studies)</h3>
+        <ul>
+          <li data-en="Led a 5+ member team, ensuring 100% on-time project completion with high quality." data-zh="帶領5人以上團隊，高品質準時完成100%專案。">Led a 5+ member team, ensuring 100% on-time project completion with high quality.</li>
+          <li data-en="Resolved team conflicts through effective communication and coordination." data-zh="透過有效溝通與協調，有效化解團隊內衝突。">Resolved team conflicts through effective communication and coordination.</li>
+          <li data-en="Demonstrated cross-disciplinary communication and collaboration skills, integrating perspectives from diverse team members." data-zh="具備跨領域團隊合作與溝通協調能力，整合不同背景成員的觀點。">Demonstrated cross-disciplinary communication and collaboration skills, integrating perspectives from diverse team members.</li>
+          <li data-en="Assigned tasks strategically, improving team efficiency by 30% and achieving an 85%+ average project score." data-zh="策略性分配任務，團隊效率提升30%，專案平均成績達85%以上。">Assigned tasks strategically, improving team efficiency by 30% and achieving an 85%+ average project score.</li>
+        </ul>
+      </div>
+
+      <!-- 卡片 3：學校經驗 -->
+      <div class="exp-card" data-category="school">
+        <h3 data-en="National Skills Competition | Business Presentation (2020)" data-zh="全國技藝競賽 | 商業簡報 (2020)">National Skills Competition | Business Presentation (2020)</h3>
+        <ul>
+          <li data-en="Organized by Ministry of Education." data-zh="教育部主辦。">Organized by Ministry of Education.</li>
+          <li data-en="Skills: Business presentation design skills and the ability to quickly identify key insights." data-zh="技能：商業簡報製作能力及快速掌握重點資訊的能力。">Skills: Business presentation design skills and the ability to quickly identify key insights.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+.exp-filter {
+  background-color: #4C3A32;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.exp-filter:hover {
+  background-color: #6b5347;
+  transform: scale(1.05);
+}
+.exp-filter.active {
+  background-color: #6b5347;
+}
+
+.exp-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.exp-card:hover {
+  transform: translateY(-5px);
+}
+.exp-card h3 {
+  font-size: 1.4rem;
+  color: #4C3A32;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.exp-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #4C3A32;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+</style>
+
+<script>
+function filterExperience(category) {
+  const cards = document.querySelectorAll('.exp-card');
+  const buttons = document.querySelectorAll('.exp-filter');
+
+  cards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+  document.querySelector(`.exp-filter[onclick="filterExperience('${category}')"]`).classList.add('active');
+}
+
+function toggleLanguage() {
+  const elements = document.querySelectorAll('[data-en][data-zh]');
+  const button = document.querySelector('.language-switcher');
+
+  elements.forEach(el => {
+    if (el.innerText.trim() === el.getAttribute('data-en')) {
+      el.innerText = el.getAttribute('data-zh');
+    } else {
+      el.innerText = el.getAttribute('data-en');
+    }
+  });
+
+  if (button) {
+    if (button.innerText.includes('EN')) {
+      button.innerText = '中文 / EN';
+    } else {
+      button.innerText = 'EN / 中文';
+    }
+  }
+}
+</script>
+<section id="skills" class="skills fade-section" style="padding: 100px 5%; background: #ffffff;">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 data-en="Skills" data-zh="技能" style="font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #4C3A32; text-align: center; margin-bottom: 60px;">Skills</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+
+      <div class="skill-card">
+        <div class="skill-icon">🧠</div>
+        <h3 data-en="Logical Thinking & Independent Judgment" data-zh="邏輯思考與獨立判斷">Logical Thinking & Independent Judgment</h3>
+        <p data-en="Capable of rational analysis and sound decision-making" data-zh="能夠理性分析並做出穩健決策">Capable of rational analysis and sound decision-making</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🤝</div>
+        <h3 data-en="Teamwork & Communication" data-zh="團隊合作與溝通">Teamwork & Communication</h3>
+        <p data-en="Experienced in cross-functional collaboration and aligning diverse perspectives" data-zh="具備跨部門協作與整合多元觀點的經驗">Experienced in cross-functional collaboration and aligning diverse perspectives</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">⏱️</div>
+        <h3 data-en="Time Management & Stress Resilience" data-zh="時間管理與抗壓能力">Time Management & Stress Resilience</h3>
+        <p data-en="Efficient under pressure with excellent task prioritization" data-zh="擅長在壓力下高效完成工作並妥善安排優先順序">Efficient under pressure with excellent task prioritization</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🛠️</div>
+        <h3 data-en="Problem Solving" data-zh="問題解決">Problem Solving</h3>
+        <p data-en="Skilled in issue breakdown, innovation, and process optimization" data-zh="擅長問題拆解、創新思考與流程優化">Skilled in issue breakdown, innovation, and process optimization</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">📈</div>
+        <h3 data-en="Business Thinking & Product Sense" data-zh="商業思維與產品敏銳度">Business Thinking & Product Sense</h3>
+        <p data-en="Able to translate user needs and market trends into executable strategies" data-zh="能將用戶需求與市場趨勢轉化為可執行策略">Able to translate user needs and market trends into executable strategies</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">💻</div>
+        <h3 data-en="Proficient in Microsoft Office" data-zh="熟悉 Microsoft Office">Proficient in Microsoft Office</h3>
+        <p data-en="Hands-on experience with Word, Excel, and PowerPoint" data-zh="熟練使用Word、Excel與PowerPoint進行實務操作">Hands-on experience with Word, Excel, and PowerPoint</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.skill-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.skill-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #4C3A32;
+}
+.skill-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #4C3A32;
+  margin-bottom: 10px;
+}
+.skill-card p {
+  font-family: 'Roboto', sans-serif;
+  color: #4C3A32;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 20px;
+  }
+}
+</style>
+
+  <section id="certificates" class="certificates fade-section" style="padding: 100px 5%; background: #f8f4f1;">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 data-en="Certificates" data-zh="證照" style="text-align: center; font-family: 'Playfair Display', serif; color: #4C3A32; margin-bottom: 60px;">Certificates</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px;">
+
+      <!-- 卡片 1 -->
+      <div class="certificate-card">
+        <h3 data-en="Level B technician for computer software application (2020)" data-zh="乙級電腦軟體應用技術士（2020）">Level B technician for computer software application (2020)</h3>
+        <p data-en="Workforce Development Agency, Ministry of Labor" data-zh="勞動部勞動力發展署技能檢定中心">Workforce Development Agency, Ministry of Labor</p>
+        <p data-en="ID: 118-166157" data-zh="證照編號：118-166157">ID: 118-166157</p>
+        <p data-en="Skills: Microsoft Office, Microsoft Access, Microsoft Excel, Microsoft Word" data-zh="技能：Microsoft Office、Microsoft Access、Microsoft Excel、Microsoft Word">Skills: Microsoft Office, Microsoft Access, Microsoft Excel, Microsoft Word</p>
+      </div>
+
+      <!-- 卡片 2 -->
+      <div class="certificate-card">
+        <h3 data-en="TQC-OA - Excel Advanced (2019)" data-zh="TQC-OA - Excel 高級（2019）">TQC-OA - Excel Advanced (2019)</h3>
+        <p data-en="COMPUTER SKILLS FOUNDATION" data-zh="財團法人電腦技能基金會">COMPUTER SKILLS FOUNDATION</p>
+        <p data-en="Skills: Microsoft Excel" data-zh="技能：Microsoft Excel">Skills: Microsoft Excel</p>
+      </div>
+
+      <!-- 卡片 3 -->
+      <div class="certificate-card">
+        <h3 data-en="TQC-OA - PowerPoint 2016 Professional (2019)" data-zh="TQC-OA - PowerPoint 2016 專業級（2019）">TQC-OA - PowerPoint 2016 Professional (2019)</h3>
+        <p data-en="COMPUTER SKILLS FOUNDATION" data-zh="財團法人電腦技能基金會">COMPUTER SKILLS FOUNDATION</p>
+        <p data-en="Skills: Microsoft PowerPoint" data-zh="技能：Microsoft PowerPoint">Skills: Microsoft PowerPoint</p>
+      </div>
+
+      <!-- 卡片 4 -->
+      <div class="certificate-card">
+        <h3 data-en="TQC-OA - Word Professional (2018)" data-zh="TQC-OA - Word 專業級（2018）">TQC-OA - Word Professional (2018)</h3>
+        <p data-en="COMPUTER SKILLS FOUNDATION" data-zh="財團法人電腦技能基金會">COMPUTER SKILLS FOUNDATION</p>
+        <p data-en="Skills: Microsoft Office, Microsoft Word" data-zh="技能：Microsoft Office、Microsoft Word">Skills: Microsoft Office, Microsoft Word</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.certificate-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #4C3A32;
+  font-family: 'Roboto', sans-serif;
+}
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+.certificate-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.certificate-card p {
+  margin: 4px 0;
+  font-size: 1rem;
+}
+</style>
+
+
+
+  <section id="contact" style="padding: 100px 10%; background: #ffffff;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 100px; align-items: flex-start;">
+
+    <!-- 聯繫資訊 -->
+    <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <h2 id="contact-title" style="font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #4C3A32; margin-bottom: 40px;">Contact Me</h2>
+
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" style="width: 26px; height: 26px;">
+          <a href="mailto:joshuachiu09@gmail.com" style="color: #4C3A32; font-size: 1.2rem;">joshuachiu09@gmail.com</a>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" style="width: 26px; height: 26px;">
+          <a href="https://linkedin.com/in/yi-siang-chiu-017b94358/" target="_blank" style="color: #4C3A32; font-size: 1.2rem;">linkedin.com/in/yi-siang-chiu</a>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" style="width: 26px; height: 26px;">
+          <a href="tel:+886960013811" style="color: #4C3A32; font-size: 1.2rem;">0960-013-811</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 表單 -->
+    <div style="flex: 1; min-width: 300px;">
+      <form id="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+        <input type="text" name="name" placeholder="Your Name" required style="padding: 16px; border: 1px solid #bbb; border-radius: 10px; font-size: 1rem;">
+        <input type="email" name="email" placeholder="Email Address" required style="padding: 16px; border: 1px solid #bbb; border-radius: 10px; font-size: 1rem;">
+        <input type="text" name="subject" placeholder="Subject" required style="padding: 16px; border: 1px solid #bbb; border-radius: 10px; font-size: 1rem;">
+        <textarea name="message" placeholder="Message" rows="6" required style="padding: 16px; border: 1px solid #bbb; border-radius: 10px; font-size: 1rem; resize: vertical;"></textarea>
+        <button type="submit" style="background-color: #4C3A32; color: white; padding: 16px 28px; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.3s;">Send Message</button>
+        <p id="form-status" style="font-size: 1rem; margin-top: 10px;"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- 引入 EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init('NHM9EKQZQF8xQP8tP'); // 你的 Public Key
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_0q9d9vr', 'template_pyk2ixi', this)
+      .then(function() {
+        status.style.color = 'green';
+        status.textContent = 'Message sent successfully! ✅';
+        form.reset();
+      }, function(error) {
+        status.style.color = 'red';
+        status.textContent = 'Failed to send message. ❌ Please try again later.';
+        console.error('EmailJS Error:', error);
+      });
+  });
+</script>
+
+
+
+
+
+
+  <footer>
+    <p>&copy; 2025 Yi Siang Chiu. All rights reserved.</p>
+  </footer>
+</body>
+</html>
