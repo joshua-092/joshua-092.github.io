@@ -29,25 +29,38 @@ function toggleLanguage() {
   const button = document.querySelector('.language-switcher');
 
   elements.forEach(el => {
-    if (el.placeholder !== undefined) {
-      el.placeholder = (currentLang === 'en') ? el.getAttribute('data-zh') : el.getAttribute('data-en');
+    const currentText = el.textContent.replace(/\s+/g, '').trim(); // <== 加上這段，去除全部空白
+    const enText = el.getAttribute('data-en').replace(/\s+/g, '');
+    const zhText = el.getAttribute('data-zh').replace(/\s+/g, '');
+
+    if (currentLang === 'en') {
+      el.textContent = el.getAttribute('data-zh');
     } else {
-      el.innerText = (currentLang === 'en') ? el.getAttribute('data-zh') : el.getAttribute('data-en');
+      el.textContent = el.getAttribute('data-en');
     }
   });
 
-  currentLang = (currentLang === 'en') ? 'zh' : 'en';
   if (button) {
-    button.innerText = (currentLang === 'en') ? '中文 / EN' : 'EN / 中文';
+    button.innerText = (currentLang === 'en') ? 'EN / 中文' : '中文 / EN';
   }
+
+  currentLang = (currentLang === 'en') ? 'zh' : 'en';
 }
 
-// 導覽列滾動時加陰影效果
 window.addEventListener('scroll', function() {
-  const nav = document.querySelector('nav');
+  const header = document.querySelector('.site-header');
   if (window.scrollY > 50) {
-    nav.classList.add('scrolled');
+    header.classList.add('scrolled');
   } else {
-    nav.classList.remove('scrolled');
+    header.classList.remove('scrolled');
   }
 });
+
+// 手機版 漢堡選單 切換
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+
+
