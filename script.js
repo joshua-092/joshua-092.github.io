@@ -48,7 +48,7 @@ function toggleLanguage() {
 }
 
 window.addEventListener('scroll', function() {
-  const header = document.querySelector('.site-header');
+  const header = document.querySelector('.sticky-header');
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
   } else {
@@ -56,6 +56,26 @@ window.addEventListener('scroll', function() {
   }
 });
 
+function toggleMobileMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById("mobileMenu").style.display = "none";
+  });
+});
 
 
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
 
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
