@@ -16,22 +16,39 @@
 
 <body>
 
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+
 <header class="sticky-header">
   <div class="header-top">
-    <div class="logo">YI SIANG CHIU</div>
+    <a href="#home" class="logo">YI SIANG CHIU</a>
     <button class="language-switcher" onclick="toggleLanguage()">中文 / EN</button>
   </div>
 
-  <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact Me</a>
-  </nav>
-  
+ <nav class="navbar">
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a> <!-- ✅ 新增 -->
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#contact">Contact Me</a>
+</nav>
+
+<div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a> <!-- ✅ 新增 -->
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#contact">Contact Me</a>
+</div>
+
+
 </header>
 
 
@@ -104,6 +121,129 @@
 
   </div>
 </section>
+
+<!-- PROJECT SECTION -->
+<section id="projects" class="projects-section">
+  <h2 data-en="Projects" data-zh="專案成果">Projects</h2>
+  <div class="project-gallery">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="https://www.foodnext.net/dispPageBox/getFile/GetImg.aspx?FileLocation=%2FPJ-FOODNEXT%2FFiles%2F&FileName=photo-72481-i.jpg" alt="Starbucks Project">
+      <h3 data-en="Strategic Management: Starbucks Taiwan" data-zh="策略管理研究：台灣星巴克">Strategic Management: Starbucks Taiwan</h3>
+      <p data-en="How Starbucks maintains leadership in a competitive local market."
+         data-zh="探討星巴克如何在本土品牌崛起中保持領先地位。">
+         How Starbucks maintains leadership in a competitive local market.
+      </p>
+      <button onclick="openModal('modal1')">See More</button>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="https://media.ed.edmunds-media.com/tesla/model-y/2026/oem/2026_tesla_model-y_4dr-suv_long-range-launch-series_fq_oem_1_1280.jpg" alt="Tesla Project">
+      <h3 data-en="Strategic Leadership Planning: Tesla" data-zh="策略性領導規劃：Tesla">Strategic Leadership Planning: Tesla</h3>
+      <p data-en="Exploring Tesla’s leadership strategy and innovation model."
+         data-zh="深入探討特斯拉的領導策略與創新模式。">
+         Exploring Tesla’s leadership strategy and innovation model.
+      </p>
+      <button onclick="openModal('modal2')">See More</button>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="https://i0.wp.com/cdn.wperp.com/uploads/2017/12/Power-of-Communication.jpg?fit=800%2C532&ssl=1" alt="HR Communication Project">
+      <h3 data-en="HRM Communication Report" data-zh="人力資源管理：主題溝通">HRM Communication Report</h3>
+      <p data-en="A report on internal communication effectiveness in HR management."
+         data-zh="探討人力資源管理中內部溝通的有效性與實務分析。">
+         A report on internal communication effectiveness in HR management.
+      </p>
+      <button onclick="openModal('modal3')">See More</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal Overlays -->
+<div class="project-modal" id="modal1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <img src="https://i.postimg.cc/xdtJZnfb/01.png" alt="Starbucks Project">
+    <h3 data-en="Strategic Management: Starbucks Taiwan" data-zh="策略管理研究：台灣星巴克">Strategic Management: Starbucks Taiwan</h3>
+
+    <p data-en="This report explores how Starbucks Taiwan sustains market leadership amid rising local brands, using frameworks like PESTEL, SWOT, and Porter's Five Forces. It highlights core strengths such as brand loyalty and digital membership models, and proposes strategic recommendations on localization and pricing.
+
+I independently conducted the analysis and wrote the entire report, applying business theory to real-world market conditions. This project demonstrates my ability to think critically, structure strategy logically, and deliver professional insights—skills that directly align with roles in product and project management."
+       data-zh="本報告以台灣星巴克為主題，透過 PESTEL、SWOT 及五力分析等策略工具，分析其在本土品牌崛起下仍能維持市場領先的關鍵優勢，並提出在地化產品策略與定價建議，強化長期差異化競爭力。
+
+此專案由我獨立完成，從資料收集、分析架構規劃到報告撰寫，皆由我一人負責。展現我將商業理論應用於實務問題的能力，並具備獨立思考、策略推演與清晰表達的專業素養，與產品及專案管理職能高度契合。">
+       This report explores how Starbucks Taiwan sustains market leadership amid rising local brands, using frameworks like PESTEL, SWOT, and Porter's Five Forces. It highlights core strengths such as brand loyalty and digital membership models, and proposes strategic recommendations on localization and pricing.
+
+       I independently conducted the analysis and wrote the entire report, applying business theory to real-world market conditions. This project demonstrates my ability to think critically, structure strategy logically, and deliver professional insights—skills that directly align with roles in product and project management.
+    </p>
+    <!-- 🔽 獨立按鈕（放在 p 外） -->
+<a href="https://your-link-to-the-report.pdf" target="_blank" class="download-button"
+   data-en="Download Report" data-zh="下載完整報告">Download Report</a>
+
+  </div>
+</div>
+
+
+<div class="project-modal" id="modal2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <img src="https://i.postimg.cc/BbtVFS65/02.png" alt="Tesla Project">
+    <h3 data-en="Strategic Leadership Planning: Tesla" data-zh="策略性領導規劃：Tesla">Strategic Leadership Planning: Tesla</h3>
+
+    <div class="project-description"
+         data-en="This report approaches Tesla’s leadership model and cultural development from the perspectives of strategic management and organizational behavior. Focusing on Elon Musk, it analyzes how his decision-making style, risk appetite, and internal communication shaped the company’s innovation and market position. The project covers leadership theory comparisons, team dynamics, and the alignment between organizational behavior and long-term vision.
+
+Working collaboratively with my team, we conducted both external and internal environmental analysis, and formulated strategic recommendations using SWOT and leadership models. I was responsible for structuring the report, building analytical logic, and consolidating key insights—demonstrating cross-functional teamwork, strategic thinking, and communication skills highly relevant to product and project management roles."
+         data-zh="本報告從策略管理與組織行為的角度切入，深入探討特斯拉的領導模式與文化塑造過程。以 Elon Musk 為核心，分析其決策風格、風險取向與內部溝通模式如何影響企業的創新能力與市場定位。內容涵蓋領導理論比較、團隊運作分析與企業長期願景的連結。
+
+在此專案中，我與團隊分工合作，從外部環境與企業內部資源進行綜合分析，並根據 SWOT 與組織行為理論制定策略建議。我主要負責報告架構規劃、分析邏輯設計與資料整合，展現跨部門協作、策略思維與專案溝通能力，具備產品與專案管理所需的整體視野與執行力。">
+      <p>
+        This report approaches Tesla’s leadership model and cultural development from the perspectives of strategic management and organizational behavior. Focusing on Elon Musk, it analyzes how his decision-making style, risk appetite, and internal communication shaped the company’s innovation and market position. The project covers leadership theory comparisons, team dynamics, and the alignment between organizational behavior and long-term vision
+      </p>
+      <p>
+        Working collaboratively with my team, we conducted both external and internal environmental analysis, and formulated strategic recommendations using SWOT and leadership models. I was responsible for structuring the report, building analytical logic, and consolidating key insights—demonstrating cross-functional teamwork, strategic thinking, and communication skills highly relevant to product and project management roles.
+      </p>
+    </div>
+
+    <a href="https://drive.google.com/file/d/1ClI1m5tm16Cjfr9ySIMAo9ZGqVnmozoH/view?usp=sharing" target="_blank" class="download-button"
+       data-en="Download Report" data-zh="下載完整報告">Download Report</a>
+  </div>
+</div>
+
+
+<div class="project-modal" id="modal3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <img src="https://i.postimg.cc/L5zNLJS1/03.png" alt="HRM Project">
+    <h3 data-en="HRM Communication Report" data-zh="人力資源管理：主題溝通">HRM Communication Report</h3>
+
+    <div class="project-description"
+         data-en="This project focused on analyzing how effective internal communication mechanisms influence HR outcomes, using real-world business case studies. We explored communication barriers, cultural context, and feedback mechanisms across departments. As part of a team, I participated in case analysis and delivered an English oral presentation to present our findings. Throughout the process, I collaborated with members to organize insights, structure our presentation logic, and co-deliver a professional summary of key recommendations.
+
+This experience strengthened my communication, teamwork, and analytical thinking—skills crucial for roles involving stakeholder coordination and cross-functional project management."
+         data-zh="此專案聚焦於探討企業內部溝通機制如何影響人力資源管理成效，並透過實際企業個案進行分析。我們深入研究跨部門溝通障礙、組織文化差異與回饋機制等因素。在專案中，我負責參與個案資料分析與英文口頭簡報呈現，並與團隊協作撰寫內容、統整架構與提出策略建議。
+
+此經驗不僅強化了我在團隊合作中的表達與邏輯組織能力，也培養了面對實務情境的分析與簡報能力，對未來跨部門專案管理與利害關係人溝通非常有助益。">
+      <p>
+        This project focused on analyzing how effective internal communication mechanisms influence HR outcomes, using real-world business case studies. We explored communication barriers, cultural context, and feedback mechanisms across departments.
+      </p>
+      <p>
+        As part of a team, I participated in case analysis and delivered an English oral presentation to present our findings. Throughout the process, I collaborated with members to organize insights, structure our presentation logic, and co-deliver a professional summary of key recommendations.
+      </p>
+      <p>
+        This experience strengthened my communication, teamwork, and analytical thinking—skills crucial for roles involving stakeholder coordination and cross-functional project management.
+      </p>
+    </div>
+
+    <a href="https://drive.google.com/file/d/1KwH5_YJqPr1mu0MwoZw0RW2dpYaLpaIF/view?usp=sharing" target="_blank" class="download-button"
+       data-en="Download Report" data-zh="下載完整報告">Download Report</a>
+  </div>
+</div>
+
 
   <section id="experience" class="experience-section">
   <h2 data-en="Experience" data-zh="經歷">Experience</h2>
