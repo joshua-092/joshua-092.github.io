@@ -273,7 +273,7 @@ body {
 
 /* === About Me 區塊 === */
 .about-section {
-  background-color: #F5F5F5;
+  background-color: #FAFAFA;
   padding: 120px 0;
 }
 
@@ -333,7 +333,7 @@ body {
 
 /* === Education Section Style === */
 .education-section {
-  background-color: #FAFAFA;
+  background-color: #F5F5F5;
   padding: 100px 20px;
 }
 
@@ -434,7 +434,7 @@ body {
 /* === projects Style === */
 
 .projects-section {
-  background-color:#F5F5F5;
+  background-color:#FAFAFA;
   padding: 100px 20px;
   text-align: center;
 }
@@ -578,7 +578,7 @@ body {
 
 /* === experience Style === */
 .experience-section {
-  background-color:#FAFAFA;
+  background-color:#F5F5F5;
   padding: 100px 20px;
   text-align: center;
 }
@@ -665,7 +665,7 @@ body {
 
 /* === Skills Style === */
 .skills-section {
-  background-color:#F5F5F5;
+  background-color:#FAFAFA;
   text-align: center;
   padding: 80px 20px;
 }
@@ -735,7 +735,7 @@ body {
 
 /* === certificates Style === */
 .certificates-section {
-  background-color: #FAFAFA;
+  background-color: #F5F5F5;
   padding: 100px 20px;
   text-align: center;
 }
@@ -819,7 +819,7 @@ body {
 
 /* === Contact Section === */
 .contact-section {
-  background-color: #F5F5F5;
+  background-color: #FAFAFA;
   padding: 100px 10%;
 }
 
